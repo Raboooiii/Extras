@@ -1,0 +1,43 @@
+|------------------------------------------------------------------------|
+| MessManagementSystemGUI                                                |
+|------------------------------------------------------------------------|
+| - customers: Map<String, Customer>                                     |
+| - customerIdField: JTextField                                          |
+| - nameField: JTextField                                                |
+| - hostelNameField: JTextField                                          |
+| - courseField: JTextField                                              |
+| - mobileNumberField: JTextField                                        |
+| - miscelleneousField: JTextField                                       |
+| - enrollButton: JButton                                                |
+| - logEntryButton: JButton                                              |
+| - messCutButton: JButton                                               |
+| - markAbsentButton: JButton                                            |
+| - generateBillButton: JButton                                          |
+| - miscellaneousNotesButton: JButton                                    |
+| - displayAllBillsButton: JButton                                       |
+| - outputArea: JTextArea                                                |
+|------------------------------------------------------------------------|
+| + MessManagementSystemGUI()                                            |
+| + actionPerformed(ActionEvent): void                                   |
+| - enrollCustomer(String, String, String, String, String, String): void |
+| - logEntry(String): void                                               |
+| - markMessCut(String): void                                            |
+| - markAbsent(String): void                                             |
+| - generateBill(String): void                                           |
+| - displayAllBills(): void                                              |
+|------------------------------------------------------------------------|
+
+|----------------------------------------------------|
+| Customer                                           |
+|----------------------------------------------------|
+| - customerId: String                               |
+| - name: String                                     |
+| - hostelName: String                               |
+| - course: String                                   |
+| - mobileNumber: String                             |
+| - enrolled: boolean                                |
+| - messCut: boolean                                 |
+| - totalCost: int                                   |
+|----------------------------------------------------|
+| + Customer(String, String, String, String, String) |
+|----------------------------------------------------|
