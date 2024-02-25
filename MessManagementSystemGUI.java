@@ -39,16 +39,13 @@ public class MessManagementSystemGUI extends JFrame implements ActionListener {
         setSize(1000, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Create a panel to contain all components
         JPanel panel = new JPanel();
         panel.setLayout(null);
         JScrollPane scrollPane = new JScrollPane(panel);
         setContentPane(scrollPane);
 
-        // Set size of the panel to be larger than the frame
         panel.setPreferredSize(new Dimension(1200, 800));
 
-        // Place components on the panel
         JLabel customerIdLabel = new JLabel("Customer ID:");
         customerIdLabel.setBounds(20, 20, 100, 20);
         panel.add(customerIdLabel);
@@ -170,7 +167,7 @@ public class MessManagementSystemGUI extends JFrame implements ActionListener {
             if (!customer.enrolled) {
                 customer.enrolled = true;
             }
-            customer.totalCost += 98; // Daily meal fee
+            customer.totalCost += 98; 
         }
     }
 
@@ -178,7 +175,7 @@ public class MessManagementSystemGUI extends JFrame implements ActionListener {
         Customer customer = customers.get(customerId);
         if (customer != null) {
             customer.messCut = true;
-            customer.totalCost += 25; // Mess cut cost
+            customer.totalCost += 25;
             outputArea.append("Mess cut marked for: " + customer.name + "\n");
         }
     }
@@ -186,7 +183,7 @@ public class MessManagementSystemGUI extends JFrame implements ActionListener {
     public void markAbsent(String customerId) {
         Customer customer = customers.get(customerId);
         if (customer != null) {
-            customer.totalCost += 50; // Fine for missing
+            customer.totalCost += 50; 
             outputArea.append("Absent marked for: " + customer.name + "\n");
         }
     }
